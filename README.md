@@ -60,7 +60,7 @@ mid|O|발급받은 매체 아이디
 }
 
 ```
-### 반복되는 items 하위 항목에 대한 정의.
+#### 반복되는 items 하위 항목에 대한 정의.
 
 Parameter|Mandantory|Description
 :---:|:---:|:---:
