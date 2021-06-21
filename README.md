@@ -1,2 +1,2 @@
-# S2S
+# Server to server integration
 Cached data in own servers
