@@ -4,6 +4,8 @@
 시작하기 위해 제휴를 통해 계정을 발급 받아야 합니다.<br>
 아래 메일을 통해 계정을 발급 받으세요.<br>
 
+연동 매체정보 및 제휴내용을 함께 보내주시면 보다 빠른 처리가 가능합니다.
+
 > 제휴메일 : <newspub@adxcorp.kr>
 
 # 유의사항
@@ -14,8 +16,8 @@
 
 Status|URL
 :---:|:---:
-TEST|http://wwwt.newspub.kr/ax/rss
-LIVE|http://www.newspub.kr/ax/rss
+TEST|http://wwwt.newspub.kr/api/rss
+LIVE|http://www.newspub.kr/api/rss
 
 Parameter|Mandantory|Description
 :---:|:---:|:---:
@@ -38,7 +40,7 @@ mid|O|발급받은 매체 아이디
     items: [
     {
       _id: "60d00309c6e69076217bdeb0",
-      link: "http://wwwt.newspub.kr/content/60d00309c6e69076217bdeb0?rss=1&aid=607ce2d50d0653603e95dd40&mid=607e5f007f88ba08cb651f93",
+      link: "http://wwwt.newspub.kr/content?nid=60d5b028c26d38571259b2e6&rss=1&aid=6090a3918428577c038d1161&mid=607e5f007f88ba08cb651f93",
       category_name: "매거진",
       title: "전설적인 클래식카 탈보-라고 T26이 8월 경매에 나온다",
       author: "IMBOLDN",
@@ -48,7 +50,7 @@ mid|O|발급받은 매체 아이디
     },
     {
       _id: "60d00309c6e69076217bdeb1",
-      link: "http://wwwt.newspub.kr/content/60d00309c6e69076217bdeb1?rss=1&aid=607ce2d50d0653603e95dd40&mid=607e5f007f88ba08cb651f93",
+      link: "http://wwwt.newspub.kr/content?nid=60d5af5fc26d38571259b2e2&rss=1&aid=6090a3918428577c038d1161&mid=607e5f007f88ba08cb651f93",
       category_name: "매거진",
       title: "양면을 원해, 거치 가능한 젠스 마그네틱 듀얼 보조 배터리",
       author: "IMBOLDN",
@@ -60,15 +62,27 @@ mid|O|발급받은 매체 아이디
 }
 
 ```
-#### 반복되는 items 하위 항목에 대한 정의.
 
-Parameter|Mandantory|Description
-:---:|:---:|:---:
-_id|O|아이디
-link|O|URL
-category_name|O|카테고리 정보
-title|O|제목
-author|O|소유자
-image|X|대표이미지
-description|O|설명
-pub_date|O|배포일자
+Key|Key|Key|Mandantory|Description
+:---:|:---:|:---:|:---:|:---
+result|||O|응답 코드
+message|||O|응답 메세지
+data|||O|응답 데이터
+||title||O|Rss 제목
+||link||O|사이트 주소
+||description||O|Rss 설명
+||items||O|Rss Asset (Array)
+|||_id|O|아이디
+|||link|O|URL
+|||category_name|O|카테고리 정보
+|||title|O|제목
+|||author|O|소유자
+|||image|X|대표이미지
+|||description|O|설명
+|||pub_date|O|배포일자
+
+# 응딥코드 (result)
+Code|Description
+:---:|:---:
+0|Success
+400|Bad Request
