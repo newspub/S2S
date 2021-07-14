@@ -25,6 +25,10 @@ Parameter|Mandantory|Description
 :---:|:---:|:---:
 aid|O|발급받은 계정 아이디
 mid|O|발급받은 매체 아이디
+cat|X|요청 카테고리(값이 없는경우 전체 카테고리)<br>여러 카테고리 요청시엔 comma(,)로 구분<br>예) 1,2,3<br>카테고리표 하단 참조
+
+# Request sample
+http://www.newspub.kr/api/rss?aid={발급받은AID}&mid={발급받은MID}&cat={원하는카테고리,없으면전체카테고리}
 
 # Response
 
@@ -83,8 +87,23 @@ data|||O|응답 데이터
 |||description|O|설명
 |||pub_date|O|배포일자
 
-# 응딥코드 (result)
+# 응딥 코드 (result)
 Code|Description
 :---:|:---:
 0|Success
 400|Bad Request
+
+# 카테고리 코드
+Code|Description
+:---:|:---:
+1|사회
+2|정치
+3|연예
+4|스포츠
+5|매거진
+6|생활/문화
+7|경제
+8|재테크
+9|IT/과학
+10|주식
+11|해외
