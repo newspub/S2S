@@ -18,8 +18,8 @@
 
 Status|URL
 :---:|:---:
-TEST|http://wwwt.newspub.kr/api/rss
-LIVE|http://www.newspub.kr/api/rss
+TEST|https://wwwt.newspub.kr/api/rss
+LIVE|https://www.newspub.kr/api/rss
 
 Parameter|Mandantory|Description
 :---:|:---:|:---:
@@ -28,7 +28,7 @@ mid|O|발급받은 매체 아이디
 cat|X|요청 카테고리(값이 없는경우 전체 카테고리)<br>여러 카테고리 요청시엔 comma(,)로 구분<br>예) 1,2,3<br>카테고리표 하단 참조
 
 # Request sample
-http://www.newspub.kr/api/rss?aid={발급받은AID}&mid={발급받은MID}&cat={원하는카테고리,없으면전체카테고리}
+https://www.newspub.kr/api/rss?aid={발급받은AID}&mid={발급받은MID}&cat={원하는카테고리,없으면전체카테고리}
 
 # Response
 
